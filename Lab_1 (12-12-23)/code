@@ -4,7 +4,7 @@ class quad{
 		int a,b,c;
 		double r1,r2,d;
 		Scanner s = new Scanner(System.in);
-		System.out.println("Prajwal P\n1BM22CS200");
+		System.out.println("Niket P\n1BM22CS180");
 		System.out.println("Enter the coefficients of a,b,c");
 		a = s.nextInt();
 		b = s.nextInt();

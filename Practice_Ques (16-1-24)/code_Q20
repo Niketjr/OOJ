@@ -1,0 +1,48 @@
+import java.util.*;
+abstract class shape{
+    double pi = 3.14;
+    abstract void calcArea();
+    abstract void calcPerimeter();
+}
+class circle extends shape{
+    Scanner sc = new Scanner(System.in);
+    void calcArea(){
+        
+        System.out.println("Enter radius:");
+        int r = sc.nextInt();
+        System.out.println("Area of circle:"+Math.pow(r,2)*pi);
+    }
+    void calcPerimeter(){
+        System.out.println("Enter radius:");
+        int r = sc.nextInt();
+        System.out.println("Perimeter of circle:"+2*pi*r);
+    }
+}
+class triangle extends shape{
+    Scanner sc = new Scanner(System.in);
+    void calcArea(){
+        System.out.println("Enter height:");
+        int h = sc.nextInt();
+        System.out.println("Enter base:");
+        int b = sc.nextInt();
+        System.out.println("Area of triangle:"+0.5*h*b);
+    }
+    void calcPerimeter(){
+        System.out.println("Enter height:");
+        int h = sc.nextInt();
+        System.out.println("Enter base:");
+        int b = sc.nextInt();
+        System.out.println("Perimeter of triangle:"+0.5*h*b);
+    }
+}
+class main{
+    public static void main(String args[]){
+        circle c = new circle();
+        c.calcArea();
+        c.calcPerimeter();
+        
+        triangle t = new triangle();
+        t.calcArea();
+        t.calcPerimeter();
+    }
+}

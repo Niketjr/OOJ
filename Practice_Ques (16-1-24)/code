@@ -1,5 +1,22 @@
-
+import java.util.Scanner;
 import java.util.Arrays;
+class Students{
+    int rno;
+    String full_name;
+    int sem;
+    float cgpa;
+    
+    
+    Students(int rno, String full_name, int sem, float cgpa){
+        this.rno = rno;
+        this.full_name = full_name;
+        this.sem = sem;
+        this.cgpa = cgpa;
+    }
+    void display(){
+        System.out.println("Registration number:"+rno+" Name:"+full_name+" Semester: "+sem+" CGPA:"+cgpa);
+    }
+}
 class main{
     public static void main(String[] args) {
         //Q1
@@ -16,6 +33,10 @@ class main{
         String strLiteral = "Hello";
         System.out.println("String created using literal: "+strLiteral+"\n");
         System.out.println("concatenated String: "+strLiteral.concat(strFromBytes));
+        
+        //Q3
+        int u=12,v=32;
+        System.out.println(toString(u,v));
         
         //Q4
         char s1[] = new char[3-0];
@@ -110,4 +131,44 @@ class main{
             }
         } while(i != -1);
         
+        //Q14
+        String h = "Hello";
+        String w= "World";
+        System.out.println(h.concat(w));
+        
+        //Q15
+        String c = "College";
+        System.out.println(c.replace('l','m'));
+        
+        //Q16
+        String tri = "   Hello World   ";
+        System.out.println(tri.trim());
+        
+        //Q17
+        Scanner sc = new Scanner(System.in);
+        Students st[] = new Students[5];
+        
+        int rno, sem;
+        String full_name;
+        float cgpa;
+        for(int i=0;i<1;i++){
+            System.out.println("Enter registration number:");
+            rno = sc.nextInt();
+            sc.nextLine();
+            System.out.println("Enter full name:");
+            full_name = sc.nextLine();
+            System.out.println("Enter semester:");
+            sem = sc.nextInt();
+            System.out.println("Enter cgap:");
+            cgpa = sc.nextFloat();
+            st[i] = new Students(rno, full_name, sem, cgpa);
+        }
+        for(int i=0;i<1;i++){
+            st[i].display();
+        }
+    }
+}
+public static String toString(int a, int b){
+    return "String: "+a+b;
+}
     

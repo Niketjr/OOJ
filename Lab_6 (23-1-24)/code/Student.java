@@ -1,5 +1,5 @@
 package CIE;
-public class S tudent
+public class Student
 {
  String name;
  String usn;
